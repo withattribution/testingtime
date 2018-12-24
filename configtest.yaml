@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: store-config
+  namespace: default
+  labels:
+    tier: dev
+data:
+  STORE_HOST: "cockroachdb-public"
+  STORE_PORT: "26257"
+  STORE_USER: "usersvc"
+  STORE_DB: "usersvcdb"
+  CA_CERT: "/cockroach-certs/ca.crt"
+  STORE_KEY: "/cockroach-certs/client.usersvc.key"
+  STORE_CERT: "/cockroach-certs/client.usersvc.crt"
